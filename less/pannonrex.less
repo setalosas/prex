@@ -20,11 +20,10 @@
    function-parentheses-newline-inside, function-comma-newline-after,
    font-family-no-missing-generic-family-keyword
 */
-/* off */
 
 @charset "UTF-8";
 
-@import "../res/esm/stdlib/less/lessentials";
+@import "//pres.mork.work/res/esm/stdlib/less/lessentials";
 
 body::before {.absRT(20px, 122px); .noMouse();  opacity: .2; z-index: 9;
   .font(96px, 400); content: '🐻‍❄️';}
@@ -41,11 +40,11 @@ body::before {.absRT(20px, 122px); .noMouse();  opacity: .2; z-index: 9;
 
 .pmap-gantt-tr { background: hsla(60, 100%, 88%, .1);}
 
-.pmap-gcal-bar-rtext {padding: 0 6px 0 16px; .roco(); .font(12px, 400); 
+.pmap-gcal-bar-rtext {padding: 0 6px 0 16px; .roco(); .font(11.5px, 400); 
   .cb(#888, @W75);
   border-bottom: 1px dotted #666; border-right: 1px dotted #666; .boraLR(0, 8px);
   .textShade(@B1); box-shadow: 0 0 2px 1px @W5;}
-.pmap-gcal-bar-pct {
+.pmap-gcal-bar-pct { height: undef; top: 3px; bottom: 3px;
   background: linear-gradient(to right, ~"hsl(var(--hue), 25%, 50%), hsl(var(--hue), 90%, 40%)");}
 .pmap-gcal-bar {
   box-shadow: 0 0 3px 1px @blu, inset 0 0 1px 0 @blu;

@@ -20,7 +20,6 @@
    function-parentheses-newline-inside, function-comma-newline-after,
    font-family-no-missing-generic-family-keyword
 */
-/* off */
 /* @nicedarkblue: #008ab8; */
 .hand {
   cursor: pointer;
@@ -72,7 +71,7 @@ body::before {
   left: 0;
   top: 0;
   border-radius: 8px;
-  width: var(--pt, 25%);
+  width: var(--pt, 50%);
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
   content: '';
@@ -87,7 +86,7 @@ body::before {
 .pmap-gcal-bar-rtext {
   padding: 0 6px 0 16px;
   font: 400 11px roboto condensed;
-  font-size: 12px;
+  font-size: 11.5px;
   font-weight: 400;
   color: #888;
   background-color: rgba(255, 255, 255, 0.75);
@@ -98,6 +97,9 @@ body::before {
   box-shadow: 0 0 2px 1px rgba(255, 255, 255, 0.5);
 }
 .pmap-gcal-bar-pct {
+  height: undef;
+  top: 3px;
+  bottom: 3px;
   background: linear-gradient(to right, hsl(var(--hue), 25%, 50%), hsl(var(--hue), 90%, 40%));
 }
 .pmap-gcal-bar {

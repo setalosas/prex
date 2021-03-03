@@ -3,16 +3,6 @@
    no-return-assign, camelcase, yoda, object-property-newline, no-floating-decimal, import/first, 
    standard/array-bracket-even-spacing, object-curly-newline, no-void, quotes */
    
-/* ### http://prex.mork.work ######################
-   server { listen 443 ssl; server_name prex.mork.work; include fav.conf;
-     location / {root "c:/13/custom/chrome extensions/chromever/";
-       include mime.types;
-       add_header X-men 's:prex' always; 
-       include nginx-no-cors.conf;
-     }
-     include nginx-https-proxy-cert.conf; }   
-*/   
-
 const loc = window.location.href
 const sloc = loc.substr(0, 80)
 const scripts = {}
@@ -35,12 +25,11 @@ const initSiteScripts = async sitekey => {
 
   log = (...args) => console.log(`%c👽supermod(${superModFp}): ` + args.shift(), st, ...args)
 
-  //log('start', sloc, document.body.getAttribute('sitekey'))
-
   //%The scripts
     
   scripts.pannonrex = async _ => {
-    const pr = {}
+    const pr = {
+    }
     const percentize = (arr, maxwi, fromParent = false, doCol = false) => arr.each((_, o) => {
       const starr = o.getAttribute('style').split(';')
       const turul = []
@@ -71,7 +60,7 @@ const initSiteScripts = async sitekey => {
         if (event.buttons & 1) {
           const {target, offsetX} = event
           const {clientWidth} = target
-          const pct = clamp(offsetX / clientWidth, .01, 1)
+          const pct = clamp(offsetX / clientWidth, .05, 1)
           const nuwi = round(2 * pr.cw * pct)
           if (nuwi !== pr.nuwi) {
             pr.nuwi = nuwi
