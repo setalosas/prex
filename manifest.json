@@ -1,0 +1,77 @@
+{
+  "name": "witchChrome.prexOnly",
+  "version": "1.0.0",
+  "author": "setalosas",
+  "manifest_version": 2,
+  "description": "witchChrome.prexOnly displays Chrome version (channel + build) in toolbar.",
+  "browser_action": {
+    "default_icon": {            
+      "16": "icons/nochrome_cr.png", 
+      "19": "icons/nochrome_cr.png", 
+      "24": "icons/nochrome_cr.png", 
+      "32": "icons/nochrome_cr.png"  
+    },
+    "default_popup": "popup.html",
+    "default_title": "chromeVer"  // optional; shown in tooltip
+  },
+	"content_scripts": [ {
+    "css": [ 
+    ],
+    "js": [ 
+      "injector.js",
+      "supermod-esm.js"
+    ],
+    "matches": [ "https://*/*" ],
+    "exclude_matches": [ "https://*.tork.work/*" ],
+    "all_frames": true,
+    "run_at": "document_start"
+  } ],
+  "content_security_policy": "script-src 'self' https://prex.mork.work https://pres.mork.work; object-src 'self'",
+  "icons": {
+    "16": "icons/canarygreen_cr.png",
+    "19": "icons/canarygreen_cr.png",
+    "24": "icons/canarygreen_cr.png",
+    "32": "icons/canarygreen_cr.png",
+    "48": "icons/canarygreen_cr.png",
+    "128": "icons/canarygreen_cr.png"
+  },
+  "default_locale": "en",
+  "background": {
+    "scripts": [
+      "src/bg/background.js"
+    ],
+    "persistent": true
+  },
+  "permissions": [
+    "notifications",
+    "activeTab",
+    "tabs",
+    "storage",
+    "tabs",
+    "https://prex.mork.work/",
+    "activeTab",
+    "unlimitedStorage",
+    "idle",
+    "chrome://favicon/",
+    "contextMenus",
+    "\u003Call_urls>",
+    "identity",
+    "management", 
+    "webNavigation", 
+    "webRequest", 
+    "webRequestBlocking", 
+    "clipboardWrite", 
+    "cookies"
+  ],
+ "web_accessible_resources": [ 
+   "supermod-esm.js",
+   "https://pres.mork.work/res/esm/stdlib/corelib-esm.js",
+   "https://pres.mork.work/res/esm/stdlib/debug-esm.js",
+   "https://pres.mork.work/res/esm/stdlib/date-humanizer-esm.js",
+   "https://pres.mork.work/res/esm/stdlib/tardis-esm.js",
+   "https://pres.mork.work/res/esm/stdlib/types-esm.js",
+   "https://pres.mork.work/res/esm/dom/css2js-esm.js",
+	 "https://pres.mork.work/res/esm/dom/dom-plus-ultra-esm.js",
+   "https://pres.mork.work/res/js/jquery/3.4.1/jquery.min.js"
+ ]
+}

@@ -1,0 +1,68 @@
+// out: ../css/pannonrex.css, sourcemap: false
+/* stylelint-disable indentation, no-eol-whitespace,
+   selector-combinator-space-before,
+   selector-list-comma-newline-after, rule-empty-line-before, max-empty-lines,
+   declaration-block-semicolon-newline-after,  declaration-empty-line-before,
+   declaration-block-single-line-max-declarations,
+   declaration-colon-newline-after,
+   comment-empty-line-before, comment-whitespace-inside,
+   block-closing-brace-newline-after, block-closing-brace-newline-before,
+   block-opening-brace-newline-after,
+   block-closing-brace-space-before, block-opening-brace-space-after,
+   custom-property-empty-line-before, no-descending-specificity, no-duplicate-selectors,
+   number-leading-zero, number-no-trailing-zeros, length-zero-no-unit, 
+   color-hex-length, color-hex-case,
+   declaration-block-no-duplicate-properties,
+   declaration-block-no-duplicate-property-overrides,
+   declaration-block-no-shorthand-property-overrides,
+   selector-type-no-unknown,
+   string-no-newline, block-no-empty,
+   function-parentheses-newline-inside, function-comma-newline-after,
+   font-family-no-missing-generic-family-keyword
+*/
+/* off */
+
+@charset "UTF-8";
+
+@import "../res/esm/stdlib/less/lessentials";
+
+body::before {.absRT(20px, 122px); .noMouse();  opacity: .2; z-index: 9;
+  .font(96px, 400); content: '🐻‍❄️';}
+
+.noGap() {grid-column-gap: 1px; padding-bottom: 10px;}
+.normalTitle() {margin-top:6px; font: 700 18px roboto;}
+.bigTitle() {margin-top: 12px;font:900 32px roboto;}
+
+.zoomer {.fixRT(40px, 74px); .wihi(400px, 20px); .bora(8px); .bg(#caf); .hand(); z-index: 99;
+  &::after {.absLT(0, 0); .bora(8px); .wihi(var(--pt, 50%), 100%); .bgc(@B2); content: '';}}
+.zoomer, #xePlanner_ctrToolbar {user-select: none;}
+  
+@blu: hsla(200, 75%, 40%, .5);
+
+.pmap-gantt-tr { background: hsla(60, 100%, 88%, .1);}
+
+.pmap-gcal-bar-rtext {padding: 0 6px 0 16px; .roco(); .font(12px, 400); 
+  .cb(#888, @W75);
+  border-bottom: 1px dotted #666; border-right: 1px dotted #666; .boraLR(0, 8px);
+  .textShade(@B1); box-shadow: 0 0 2px 1px @W5;}
+.pmap-gcal-bar-pct {
+  background: linear-gradient(to right, ~"hsl(var(--hue), 25%, 50%), hsl(var(--hue), 90%, 40%)");}
+.pmap-gcal-bar {
+  box-shadow: 0 0 3px 1px @blu, inset 0 0 1px 0 @blu;
+  border: 1px solid fade(@blu, 100%);
+  .boraLR(0, 6px);
+}
+.pmap-gcal-bar-sum {.bgc(fade(@blu, 100%));}
+.pmap-gcal-bar-sum-end {
+  transform: translate(-.5px, 5.5px);
+  background: none;
+  max-width: 0; max-height: 0;
+  border-top: 10px solid #00e;
+  border-right: 10px solid @T;
+}
+.pmap-gcal-bar-sum-end + .pmap-gcal-bar-sum-end {
+  transform: translate(.5px, 5.5px);
+  border-top: 10px solid #d70;
+  border-right: none;
+  border-left: 10px solid @T;
+}
