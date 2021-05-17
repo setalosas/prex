@@ -2,6 +2,8 @@
    object-curly-spacing,  indent, new-cap, block-spacing, comma-spacing, handle-callback-err, 
    no-return-assign, camelcase, yoda, object-property-newline, no-floating-decimal, import/first, 
    standard/array-bracket-even-spacing, object-curly-newline, no-void, quotes */
+
+//8#964 Reduced to pannonrex.com
    
 const loc = window.location.href
 const sloc = loc.substr(0, 80)
