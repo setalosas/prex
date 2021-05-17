@@ -12,7 +12,7 @@
       "32": "icons/nochrome_cr.png"  
     },
     "default_popup": "popup.html",
-    "default_title": "chromeVer"  // optional; shown in tooltip
+    "default_title": "chromeVer"
   },
 	"content_scripts": [ {
     "css": [ 
